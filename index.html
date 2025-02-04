@@ -14,6 +14,7 @@
   </head>
   <body>
 
+    <!-- Navigation Bar -->
     <div class="navigation w3-highway-blue w3-container">
       <nav class="nav-container w3-padding-large">
         <div class="logo">
@@ -25,6 +26,7 @@
         <div class="links">
           <a href="#about">About</a>
           <a href="services.html">Services</a>
+          <a href="reviews.html">Reviews</a>
           <a href="#contact">Contact</a>            
         </div>
         <div id="mobile-sidenav" class="mobile-links w3-highway-blue">
@@ -35,20 +37,24 @@
           </div>
           <a href="#about" onclick="toggleMobileNavigation()">About Us</a>
           <a href="services.html" onclick="toggleMobileNavigation()">Services</a>
+          <a href="reviews.html" onclick="toggleMobileNavigation()">Reviews</a>
           <a href="#contact" onclick="toggleMobileNavigation()">Contact</a>
         </div>
       </nav>
     </div>
 
+    <!-- Hero Section -->
     <div class="hero" id="home">
       <div class="text container">
         <p class="pre-title">One stop for global success</p>
         <h1 class="title"> DEVJAN<span>PALMISTRY</span></h1>
         <p class="post-title">Connect with the rest of the world!</p>
         <a class="w3-button w3-round-large w3-indigo w3-hover-blue" href="services.html">OUR SERVICES</a> 
+        <a class="w3-button w3-round-large w3-indigo w3-hover-blue" href="reviews.html" style="margin-left: 10px;">CLIENT REVIEWS</a> 
       </div>
     </div>
 
+    <!-- About Section -->
     <div class="about container w3-padding-large" id="about">
       <div class="text-one">
         <h2>About Us</h2>
@@ -58,21 +64,24 @@
       </div>
     </div>
 
+    <!-- Contact Section -->
     <div class="contact container" id="contact">
       <div class="short-contact">
         <h2>Contact us</h2>
         <p class="w3-xlarge">We would like to hear from you!</p>
         <div class="w3-large w3-margin-top contact-info">
-          <i class="fa fa-envelope-o"></i><span style="margin-left:10px;"><a href="contact@devjanpalmistry.com">contact@devjanpalmistry.com</a></span><br>
-          <i class="fa fa-phone"></i><span style="margin-left:10px;"><a href="+919082650679">+919082650679</a></span><br>
+          <i class="fa fa-envelope-o"></i><span style="margin-left:10px;"><a href="mailto:contact@devjanpalmistry.com">contact@devjanpalmistry.com</a></span><br>
+          <i class="fa fa-phone"></i><span style="margin-left:10px;"><a href="tel:+919082650679">+919082650679</a></span><br>
         </div>
       </div>
     </div>
 
+    <!-- Footer -->
     <div class=" w3-highway-blue w3-padding-large" id="footer">
       <p class="w3-center logo">© 2024 - DEVJAN<span>PALMISTRY</span> - All rights reserved</p>
     </div>
 
+    <!-- Script for Mobile Navigation -->
     <script>
       function toggleMobileNavigation() {
         const mobileNavigation = document.getElementById("mobile-sidenav");

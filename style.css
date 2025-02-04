@@ -282,49 +282,64 @@ p {
 .services {
   padding-top: 50px;
   padding-bottom: 50px;
+  text-align: center;
 }
 
-.services.container,
-.careers.container {
+.services .container {
   width: 80%;
+  margin: 0 auto;
 }
 
-.services h2,
-.careers h2 {
+.services h2 {
   font-size: var(--font-3x-large);
+  margin-bottom: 20px;
 }
 
-.services .cards,
-.careers .cards {
+.services .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 20px;
 }
 
 .services .cards .card {
-  max-height: 300px;
-  height: 250px;
-  overflow: auto;
+  background: white;
   width: 30%;
-  text-align: center;
+  min-height: 200px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.services .cards .card h3,
-.careers .cards .card h3 {
+.services .cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.services .cards .card h3 {
   color: var(--title-span-color);
   font-size: var(--font-medium-large);
+  margin-bottom: 10px;
 }
 
-.services .cards .card .card-text p,
-.careers .cards .card .card-text p {
-  font-size: var(--font-medium-large);
+.services .cards .card .card-text p {
+  font-size: var(--font-medium);
+  color: #555;
 }
 
-.services .cards .card .card-text p span {
-  color: var(--title-span-color);
+/* Responsive Styling */
+@media screen and (max-width: 1024px) {
+  .services .cards .card {
+    width: 45%;
+  }
 }
+
+@media screen and (max-width: 768px) {
+  .services .cards .card {
+    width: 100%;
+  }
+}
+
 
 /*Careers*/
 .careers {

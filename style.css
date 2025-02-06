@@ -1,118 +1,109 @@
-/* Reset and Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import "./App.css";
 
+const Home = () => (
+  <motion.div className="page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <h1>Welcome to Our Website</h1>
+    <p>Discover our amazing services and see what our customers say.</p>
+  </motion.div>
+);
+
+const Services = () => (
+  <motion.div className="page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <h1>Our Services</h1>
+    <ul>
+      <li>Web Development</li>
+      <li>Graphic Design</li>
+      <li>SEO Optimization</li>
+    </ul>
+  </motion.div>
+);
+
+const Reviews = () => (
+  <motion.div className="page" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <h1>Customer Reviews</h1>
+    <div className="review">
+      <p>"Amazing service! Highly recommend." - Alex</p>
+    </div>
+    <div className="review">
+      <p>"Professional and efficient work." - Jamie</p>
+    </div>
+  </motion.div>
+);
+
+const App = () => {
+  return (
+    <Router>
+      <motion.nav className="navbar" initial={{ y: -50 }} animate={{ y: 0 }}>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/services">Services</Link></li>
+          <li><Link to="/reviews">Reviews</Link></li>
+        </ul>
+      </motion.nav>
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/reviews" element={<Reviews />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
+
+/* CSS (App.css) */
+/* General Styling */
 body {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: #ffffff;
-    line-height: 1.6;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f3f3f3, #e8e8e8);
+  margin: 0;
+  padding: 0;
 }
 
-/* Header Styling */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+.navbar {
+  background: #333;
+  padding: 1rem;
+  text-align: center;
 }
 
-header h1 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.navbar ul {
+  list-style: none;
+  padding: 0;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.navbar li {
+  display: inline;
+  margin: 0 15px;
 }
 
-nav ul li {
-    display: inline;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.2rem;
-    padding: 10px 15px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 5px;
+.container {
+  padding: 20px;
+  text-align: center;
 }
 
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
+.page {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 600px;
 }
 
-/* Main Content Styling */
-main {
-    max-width: 1200px;
-    margin: 40px auto;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1rem;
-    text-align: center;
-}
-
-/* Button Styling */
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    background: #ff9800;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.button:hover {
-    background: #e68900;
-    transform: scale(1.05);
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    margin-top: 20px;
-    font-size: 1rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    main {
-        padding: 20px;
-    }
+.review {
+  background: #fffae5;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
 }

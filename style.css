@@ -675,36 +675,46 @@ textarea {
     padding: 20px;
 }
 
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Contact Section */
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Center horizontally */
-  justify-content: center;  /* Center vertically */
-  height: 100vh;  /* Takes the full height of the viewport */
-  text-align: center;  /* Centers the text inside the container */
+  align-items: center;   /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  height: 100vh;         /* Full viewport height */
+  text-align: center;    /* Center text inside the container */
+  padding: 20px;         /* Add some padding if necessary */
 }
 
 /* Short Contact Box Styling */
 .short-contact {
   display: flex;
   flex-direction: column;
-  align-items: center;  /* Center content horizontally */
-  justify-content: center;  /* Center content vertically */
+  align-items: center;   /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  max-width: 600px;        /* Max width for the contact box */
+  width: 100%;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Optional background color */
+  border-radius: 8px;      /* Optional rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-/* Styling for Contact Info */
+/* Contact Info Icons Styling */
 .contact-info i {
   margin-right: 10px;
 }
 
-/* Optional: Center the contact form */
-.contact .form .container form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  /* Ensure the form elements are centered */
-  width: 100%;
+.contact-info a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Mobile Adjustments */
@@ -713,15 +723,14 @@ textarea {
     padding: 10px;
   }
 
-  .contact p {
-    font-size: var(--font-medium-large) !important;
+  .contact .short-contact h2 {
+    font-size: var(--font-large);
   }
 
-  .contact .container {
-    width: 100%;
+  .contact .short-contact p {
+    font-size: var(--font-medium-large);
   }
 }
-
 
 
 

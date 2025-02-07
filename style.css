@@ -682,32 +682,40 @@ textarea {
   box-sizing: border-box;
 }
 
+/* Reset all padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Contact Section */
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  height: 100vh;         /* Full viewport height */
-  text-align: center;    /* Center text inside the container */
-  padding: 20px;         /* Add some padding if necessary */
+  align-items: center;   /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  height: 100vh;         /* Make sure it takes up the full height of the viewport */
+  text-align: center;    /* Centers text inside */
+  padding: 20px;         /* Optional padding */
+  background: rgba(255, 255, 255, 0.8); /* Optional background */
 }
 
-/* Short Contact Box Styling */
+/* Short Contact Box */
 .short-contact {
   display: flex;
   flex-direction: column;
-  align-items: center;   /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  max-width: 600px;        /* Max width for the contact box */
+  align-items: center;   /* Centers the content horizontally */
+  justify-content: center; /* Centers the content vertically */
   width: 100%;
+  max-width: 600px;       /* Optional max-width */
   padding: 20px;
-  background: rgba(255, 255, 255, 0.8); /* Optional background color */
-  border-radius: 8px;      /* Optional rounded corners */
+  background: white;     /* Optional background */
+  border-radius: 8px;    /* Optional rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-/* Contact Info Icons Styling */
+/* Optional Styling for Contact Info Icons */
 .contact-info i {
   margin-right: 10px;
 }
@@ -717,20 +725,6 @@ textarea {
   color: inherit;
 }
 
-/* Mobile Adjustments */
-@media screen and (max-width: 480px) {
-  .contact {
-    padding: 10px;
-  }
-
-  .contact .short-contact h2 {
-    font-size: var(--font-large);
-  }
-
-  .contact .short-contact p {
-    font-size: var(--font-medium-large);
-  }
-}
 
 
 

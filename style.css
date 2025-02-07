@@ -706,7 +706,29 @@ textarea {
     padding: 20px;
 }
 
-  
+  /* Center the entire contact section */
+.contact.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* This makes the container take the full viewport height */
+  text-align: center; /* Ensures the text is centered */
+}
+
+/* Ensure that the content inside short-contact is centered */
+.short-contact {
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  justify-content: center; /* Vertically centers the content */
+  align-items: center; /* Horizontally centers the content */
+  text-align: center; /* Centers the text */
+}
+
+/* Additional styling if needed */
+.contact-info i {
+  margin-right: 10px;
+}
+
 
   
 }

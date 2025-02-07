@@ -689,16 +689,25 @@ textarea {
   box-sizing: border-box;
 }
 
+/* Reset all padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Contact Section */
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;   /* Centers content horizontally */
   justify-content: center; /* Centers content vertically */
-  height: 100vh;         /* Make sure it takes up the full height of the viewport */
-  text-align: center;    /* Centers text inside */
-  padding: 20px;         /* Optional padding */
+  min-height: 100vh;      /* Ensures it takes the full height of the viewport */
+  text-align: center;     /* Centers text */
+  padding: 20px;          /* Optional padding */
   background: rgba(255, 255, 255, 0.8); /* Optional background */
+  width: 100%;            /* Ensures full width */
+  box-sizing: border-box; /* Prevents overflow */
 }
 
 /* Short Contact Box */

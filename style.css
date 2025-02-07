@@ -603,28 +603,7 @@ textarea {
     font-size: var(--font-medium);
   }
 
-  .contact {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .contact .short-contact {
-    width: 100%;
-    min-height: 0;
-    justify-content: center;
-  }
-
-  .contact .short-contact h2 {
-    width: fit-content;
-  }
-
-  .contact .container {
-    width: 90%;
-  }
-
-  .contact .form .container form {
-    width: 100%;
-  }
+  
 }
 
 @media screen and (max-width: 480px) {
@@ -669,17 +648,7 @@ textarea {
     width: 100%;
   }
 
-  .contact {
-    padding: 10px;
-  }
-
-  .contact p {
-    font-size: var(--font-medium-large) !important;
-  }
-
-  .contact .container {
-    width: 100%;
-  }
+  
 
 
 .review {
@@ -706,28 +675,53 @@ textarea {
     padding: 20px;
 }
 
- /* Contact section */
-.contact.container {
+/* Contact Section */
+.contact {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the contact content horizontally */
-  justify-content: center; /* Centers it vertically */
-  height: 100vh; /* Makes the contact section take the full height of the viewport */
-  text-align: center; /* Centers text inside the container */
+  align-items: center;  /* Center horizontally */
+  justify-content: center;  /* Center vertically */
+  height: 100vh;  /* Takes the full height of the viewport */
+  text-align: center;  /* Centers the text inside the container */
 }
 
-/* Short contact box styling */
+/* Short Contact Box Styling */
 .short-contact {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Ensures the content inside short-contact is centered horizontally */
-  justify-content: center; /* Ensures the content is centered vertically */
+  align-items: center;  /* Center content horizontally */
+  justify-content: center;  /* Center content vertically */
+  padding: 20px;
 }
 
-/* Optional additional styling */
+/* Styling for Contact Info */
 .contact-info i {
   margin-right: 10px;
 }
+
+/* Optional: Center the contact form */
+.contact .form .container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Ensure the form elements are centered */
+  width: 100%;
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 480px) {
+  .contact {
+    padding: 10px;
+  }
+
+  .contact p {
+    font-size: var(--font-medium-large) !important;
+  }
+
+  .contact .container {
+    width: 100%;
+  }
+}
+
 
 
 

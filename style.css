@@ -38,6 +38,7 @@ body {
   background-size: cover; /* Makes sure the image covers the entire page */
   background-position: center center; /* Centers the image */
   background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  border: 5px solid red; /* Temporary border to check if styles are being applied */
 }
 
 * {

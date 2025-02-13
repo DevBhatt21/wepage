@@ -309,7 +309,10 @@ p {
 }
 
 .services .cards .card {
-  background: white;
+  background-image: url('1.png');
+  background-size: cover;  /* Ensures the image covers the entire section */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
   width: 30%;
   min-height: 200px;
   padding: 20px;

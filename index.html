@@ -13,7 +13,33 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+<style>
+      /* Fix for the logo on the top right */
+      .logo-right {
+        position: fixed; /* Fixed position to stay at the top right corner */
+        top: 20px; /* Adjust this value to move the logo up/down */
+        right: 20px; /* Adjust this value to move the logo left/right */
+        z-index: 1000; /* Ensure the logo is on top of other elements */
+      }
 
+      .logo-right img {
+        width: 60px; /* Adjust the width of the logo */
+        height: auto; /* Keep the aspect ratio intact */
+      }
+
+      /* Background image settings */
+      body {
+        margin: 0; /* Remove margin for full screen coverage */
+        height: 100vh; /* Ensure full viewport height */
+        background-image: url('path/to/your/image.jpg'); /* Your background image path */
+        background-size: cover; /* Make the background image cover the entire screen */
+        background-position: center; /* Center the image */
+        background-attachment: fixed; /* Fix the background image on scroll */
+        background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+      }
+    </style>
+  </head>
+  <body>
     <!-- Logo for the top right corner -->
 <div class="logo-right">
   <img src="logo.png" alt="DevJan Palmistry Logo" />

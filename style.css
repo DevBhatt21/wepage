@@ -744,17 +744,27 @@ textarea {
 
 /* Style for the logo on the top right */
 .logo-right {
-  position: fixed; /* Fixed position to stay at the top right corner */
-  top: 20px; /* Adjust this value to move the logo up/down */
-  right: 20px; /* Adjust this value to move the logo left/right */
-  z-index: 1000; /* Ensure the logo is on top of other elements */
+  position: absolute; /* Position the logo */
+  top: 20px; /* Adjust to move it down */
+  right: 20px; /* Adjust to move it left */
+  width: 120px; /* Adjust the logo size */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1000; /* Ensure it stays on top */
 }
 
-.logo-right img {
-  width: 100px; /* Adjust the width of the logo */
-  height: auto; /* Keep the aspect ratio intact */
+/* Fix the Background Image - Full Page Coverage */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
+.hero {
+  background: url('1.png') no-repeat center center fixed; 
+  background-size: cover; /* Ensures the whole screen is covered */
+  height: 100vh; /* Ensures it takes up the whole viewport */
+  width: 100%;
+}
 
 
   

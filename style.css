@@ -30,39 +30,75 @@ html, body {
   position: fixed;
   z-index: 100;
   top: 0;
-  height: 50px;
+  height: 70px;
+  background: rgba(17, 57, 96, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Navigation Container */
 .nav-container {
-  width: 70%;
-  margin: auto;
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
-.nav-container .links {
+/* Logo Styling */
+.logo {
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Navigation Links */
+.links {
   display: flex;
   gap: 25px;
-  font-family: "Courier New", monospace;
 }
 
-.nav-container a {
+.links a {
   text-decoration: none;
-  color: var(--nav-link-color);
-  font-size: var(--font-medium);
-  transition: var(--transition-fast);
+  color: rgba(233, 242, 251, 1);
+  font-size: 1em;
+  transition: color 0.2s;
 }
 
-.nav-container a:hover {
-  color: var(--nav-link-hover-color);
+.links a:hover {
+  color: rgb(190, 217, 243);
 }
 
-/* Mobile Navigation */
-.mobile-button {
-  display: none;
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin: 10px 0;
+  }
 }
+
 
 /* Hero Section */
 .hero {

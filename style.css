@@ -102,8 +102,14 @@ html, body {
 .services {
   background: url('2.webp') no-repeat center center;
   background-size: cover;
-  padding: 50px 0;
+  background-attachment: scroll; /* Change to 'fixed' if needed */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
 
 .services .cards {
   display: flex;

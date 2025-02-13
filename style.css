@@ -11,8 +11,8 @@
   position: fixed;
   z-index: 100;
   top: 0;
-  height: 70px; /* Increased height for better spacing */
-  background: rgba(17, 57, 96, 0.9); /* Slight transparency for better visibility */
+  height: 70px;
+  background: rgba(17, 57, 96, 0.9); /* Slight transparency */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -27,13 +27,17 @@
   justify-content: space-between;
 }
 
-/* Logo Styling */
+/* ✅ Logo with Background */
 .nav-container .logo {
   position: absolute;
   top: 10px;
   right: 30px;
   display: flex;
   align-items: center;
+  background: rgba(255, 255, 255, 0.8); /* White background for visibility */
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .nav-container .logo img {
@@ -66,17 +70,49 @@
   color: var(--nav-link-hover-color);
 }
 
-/* Hero Section - Fixing the Gap */
+/* ✅ Fixing Hero Section (No Gaps) */
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-top: 70px; /* Adjusted to avoid the navbar overlap */
+  padding-top: 70px;
 }
 
-/* Reviews Section - Background Fix */
+/* ✅ Services Section (Restored) */
+.services {
+  background: url('2.webp') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.services .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.services .card {
+  background: white;
+  width: 30%;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.services .card:hover {
+  transform: translateY(-5px);
+}
+
+/* ✅ Reviews Section */
 .review {
   background: url('3.avif') no-repeat center center fixed;
   background-size: cover;
@@ -97,7 +133,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Fixes */
+/* ✅ Responsive Fixes */
 @media screen and (max-width: 1024px) {
   .nav-container {
     padding: 0 20px;
@@ -133,5 +169,9 @@
 
   .review .review-container {
     width: 90%;
+  }
+
+  .services .card {
+    width: 100%;
   }
 }

@@ -100,9 +100,9 @@ html, body {
 
 /* Services Section */
 .services {
-  background: url('2.webp') no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll; /* Change to 'fixed' if needed */
+  background: url('2.webp') no-repeat center center !important;
+  background-size: cover !important;
+  background-attachment: scroll;
   min-height: 100vh;
   display: flex;
   align-items: center;

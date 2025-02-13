@@ -731,16 +731,17 @@ textarea {
 }
 
 /* Style for the logo on the top right */
+/* Style for the logo on the top right */
 .logo-right {
-  position: absolute;
-  top: 20px; /* Adjust this value to move the logo up/down */
-  right: 20px; /* Adjust this value to move the logo left/right */
-  z-index: 1000; /* Ensures that the logo stays on top of other elements */
+  position: fixed;  /* Fixed position to keep it in the top right corner even when scrolling */
+  top: 10px;        /* Adjust this value to move the logo up/down */
+  right: 10px;      /* Adjust this value to move the logo left/right */
+  z-index: 1000;    /* Ensures that the logo stays on top of other elements */
 }
 
 .logo-right img {
-  width: 100px; /* Adjust the size of the logo as needed */
-  height: auto; /* Keeps the aspect ratio intact */
+  width: 80px;  /* Adjust the width of the logo (adjust as needed) */
+  height: auto; /* Ensures the logo maintains its aspect ratio */
 }
 
 

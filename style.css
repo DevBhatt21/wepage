@@ -289,6 +289,10 @@ p {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
+  background-image: url('your-image-path.jpg'); /* Add the path to your image here */
+  background-size: cover;  /* Ensures the image covers the entire section */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
 .services .container {
@@ -309,10 +313,7 @@ p {
 }
 
 .services .cards .card {
-  background-image: url('1.png');
-  background-size: cover;  /* Ensures the image covers the entire section */
-  background-position: center center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background: white;
   width: 30%;
   min-height: 200px;
   padding: 20px;
@@ -334,17 +335,8 @@ p {
 .services .cards .card .card-text p {
   font-size: var(--font-medium);
   color: #555;
-
-  .services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
 }
 
-}
-
-/* Responsive Styling */
 @media screen and (max-width: 1024px) {
   .services .cards .card {
     width: 45%;
@@ -356,6 +348,7 @@ p {
     width: 100%;
   }
 }
+
 
 
 /*Careers*/

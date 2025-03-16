@@ -181,7 +181,6 @@ html, body {
     display: none;
   }
 
-
 /* Reviews Section */
 .review {
   background: url('3.avif') no-repeat center center fixed;
@@ -214,14 +213,20 @@ html, body {
 
 .review .review-card:hover {
   transform: translateY(-5px);
-
-.review-image {
-  width: 100px; /* Adjust the width to make images smaller */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensure proper positioning */
-  margin: 0 auto 10px; /* Center images and add spacing */
-  border-radius: 50%; /* Optional: Make images round for a stylish look */
 }
+
+/* Updated Review Image Styles */
+.review-image {
+  width: 80px; /* Smaller width */
+  height: 80px; /* Ensure it's a square */
+  object-fit: cover; /* Ensures image fills the box without distortion */
+  display: block; /* Ensures proper positioning */
+  margin: 10px auto; /* Centers the image */
+  border-radius: 50%; /* Makes the image perfectly round */
+  border: 3px solid #fff; /* Optional: Adds a clean border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds slight shadow for depth */
+}
+
 
 /* Responsive Styles */
 @media screen and (max-width: 1024px) {

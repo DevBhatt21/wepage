@@ -214,6 +214,13 @@ html, body {
 
 .review .review-card:hover {
   transform: translateY(-5px);
+
+.review-image {
+  width: 100px; /* Adjust the width to make images smaller */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure proper positioning */
+  margin: 0 auto 10px; /* Center images and add spacing */
+  border-radius: 50%; /* Optional: Make images round for a stylish look */
 }
 
 /* Responsive Styles */
